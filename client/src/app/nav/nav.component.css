@@ -1,0 +1,10 @@
+.dropdown-toggle,
+.dropdown-menu {
+  cursor: pointer;
+}
+
+.nav-link , .logout
+{
+    text-decoration: none;
+    cursor: pointer;
+}
