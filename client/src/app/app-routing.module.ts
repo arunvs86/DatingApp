@@ -1,10 +1,12 @@
+import { ServerErrorComponent } from './server-error/server-error.component';
+import { NotfoundComponent } from './notfound/notfound/notfound.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ListsComponent } from './lists/lists.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 
 const routes: Routes = [
@@ -37,6 +39,14 @@ const routes: Routes = [
     ],
   },
 
+  {
+    path: 'notfound',
+    component: NotfoundComponent,
+  },
+  {
+    path: 'server-error',
+    component: ServerErrorComponent,
+  },
   {
     path: '**',
     component: HomeComponent,
